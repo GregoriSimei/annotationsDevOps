@@ -1,0 +1,16 @@
+Com o Dockerfile cria-se uma imagem
+O docker-compose facilita a execução e criação de uma rede de containers. Com ele, não é necessário criar linhas de comando.
+
+services:
+  [service_name]:
+    image: [image_reference]
+    environment:
+      [environment_variables]
+    volumes:
+      [set_volumes]
+    build:
+      context: [local]
+      dockerfile: [dockerfile_name]
+    command: [commands_to_exec]
+    ports:
+      [set_ports_like_command_line]

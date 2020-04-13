@@ -1,0 +1,6 @@
+=====   Repository Management   =====
+
+   Ajudar no tempo de download de algumas dependencias, pois após a primeira instalação elas ficam salvas localmente. 
+   Ferramentas com este objetivo, ajudam também a manter a segurança de um software, pois em uma dependencia pode haver algum script malicioso. No entanto, uma vez que essa dependencia é passada por testes que a categorizam como segura, ela pode ser armazenada em uma ferramenta de gestão de repositório, trazendo assim, mais segurança a um software que use somente essa ferramenta de dependencias.
+
+      Tools : DockerHub, npm, Artifactory, Nexus e etc.

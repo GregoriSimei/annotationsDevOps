@@ -1,0 +1,61 @@
+			Declarativa
+
+- Na pipeline declarativa é necessário conter um agent, stages directive e steps directives.
+
+sh - Shell stop 
+junit - faz os testes Junit do artefato (Ex: junit '**/target/*.xml')
+
+
+               string de ambiente
+
+def [var_name] = "[value_string]" or '[value_string]'
+para chamalas na pipeline usa-se da seguinte forma ${var_name}
+
+ex :
+
+     pipeline{
+          agent any
+          environment{
+              username = "Gregori"
+          }
+          stages{
+               stage("Olá"){
+                     echo "Hello my friend ${username}"
+               }
+          }
+     }
+
+Resultado = Hello my friend 
+
+se o environment estiver fora dos stages, ele valerá para todos stage. No entanto, se ele estiver dentro de algum stage, valerá apenas para este.
+
+
+Ex de um modo de usar avançado:
+
+pipeline {
+    agent any 
+    environment {
+        // Using returnStdout
+        CC = """${sh(
+                returnStdout: true,
+                script: 'echo "clang"'
+            )}""" 
+        // Using returnStatus
+        EXIT_STATUS = """${sh(
+                returnStatus: true,
+                script: 'exit 1'
+            )}"""
+    }
+    stages {
+        stage('Example') {
+            environment {
+                DEBUG_FLAGS = '-g'
+            }
+            steps {
+                sh 'printenv'
+            }
+        }
+    }
+}
+
+É possível usar chamadas Jenkins dentro de uma variável.

@@ -1,0 +1,9 @@
+====   DEVOPS na Pratica   ====
+
+    - Quando um sistema falha, não é somente a empresa que esta perdendo, mas também os usuários perdem por não consiguirem realizar suas tarefas.
+    - É necessário investir na qualidade do código desde sua primeira linha escrita até o momento em que ele esta rodando em produção.
+    - Time de desenvolvimento cria aplicações e o de operações garante sua estabilidade
+    - Quanto menor a frencia de 'deploy', maior a quantidade de mudanças na proxima release. Consequentemente os riscos aumentam e juntamente as quantidades de processo para o 'deploy'. Isso pode diminuir a habilidade da empresa responder rapidamente a mudanças no negócio.
+    - Com a implementação do CD o numero de deploys aumentam e, assim sendo, diminui a quantidade de mudanças, diminuindo também os riscos de implantação. Isso ajuda na detecção de problemas, pois o numero de mudanças em cada 'deploy' são baixos.
+    - DevOps : criar uma cultura de colaboração e práticas de automação que ataca 'a ultima milha'.
+    - A ultima milha : Quando o desenvolvimento passou em todos os requisitos mas ainda não foi implantado em produção.

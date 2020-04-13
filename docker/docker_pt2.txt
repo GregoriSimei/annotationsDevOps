@@ -1,0 +1,34 @@
+ALPINE - um SO muito leve
+
+docker run [options] [image] [entry_point]
+docker ps - Lista os containers
+
+Um container depende de um processo para iniciar, ou seja, só ira rodar enquanto estiver um comando em execução.
+
+docker -d (rodar em background)
+docker -p (porta) [portaSO]:[portaContainer] [image]
+
+docker stop 
+docker start
+docker restart 
+
+--name [nome]
+
+-v (volumes) [localSO]:[localContainer]   --> Ligação entre portas de um sistema (ponto de montagem)
+
+Um container pode possuir mais de uma porta
+
+docker logs -f [image_name]
+
+docker exec [options] [container_name] [command]
+
+-i   --> Iterativo
+-t   --> Terminal
+
+docker stats [container_name]
+
+docker network create [network_name]
+
+   Quando for adicionar um container ou imagem a um network, usa-se --network [network_name] na linha de comando. Ex: docker run --network [network_name] node:13
+
+--link [sevice_name_outside]:[service_name_inside]

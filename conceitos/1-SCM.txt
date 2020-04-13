@@ -1,0 +1,6 @@
+=====   SRC (Source Code Management)   =====
+
+   O objetivo desse tipo de ferramenta é ajudar no controle de versão do código. Ou seja, facilidade ao ver o que, quem e quando algo foi alterado, permitindo o retorno para versões anteriores.
+   Ajuda também no processo de junção do Código fonte. Pois duas pessoas podem estar alterando coisas no mesmo arquivo e ao mesmo tempo, porém com esse tipo de ferramenta, não haverá perda de Código caso alguém salve o arquivo antes do outro.
+      
+      Tools : Github, Git, Bitbucket, Gitlab, Subversion, Mercurial, ISPW e etc.

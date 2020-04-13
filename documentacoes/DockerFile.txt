@@ -1,0 +1,137 @@
+
+
+                                          DOCKER FILE
+
+________________________________________________________________________________________________
+
+INSTRUCTION comands => not case sensitive, but is a best pratice
+
+= ================================  Building an Docker image  ================================ =
+
+ex:
+    FROM ubuntu
+
+    obs: you can use more than one FROM, but each FROM clears any state created by previous instruction
+
+ex: 
+     ARG VERSION=latest
+     FROM busybox:$VERSION
+     ARG VERSION
+     RUN echo $VERSION > image_version 
+
+ARG is the only instruction
+
+ex:
+     FROM [--platform=<platform>] <image> [AS <name>]
+     FROM [--platform=<platform>] <image>[:<tag>] [AS <name>]
+     FROM [--platform=<platform>] <image>[@<digest>] [AS <name>]
+
+________________________________________________________________________________________________
+= =======================================  RUN  ============================================== =
+
+ex: 
+     RUN /bin/bash -c 'source $HOME/.bashrc; echo $HOME'
+     RUN ["/bin/bash", "-c", "echo hello"]  >> the exec form is parsed as a JSON array
+
+
+________________________________________________________________________________________________
+= =========================================  CMD  ============================================ =
+
+    There can only be one CMD instruction in a dockerfile. case list more than one CMD, only the last will take efect
+
+ex: 
+     CMD ["executable","param1","param2"] (exec form, this is the preferred form)
+     CMD ["param1","param2"] (as default parameters to ENTRYPOINT)
+     CMD command param1 param2 (shell form)
+
+obs: The main purpose of a CMD is to provide defaults for an executing container. These defaults can include an executable, or they can omit the executable, in which case you must specify an ENTRYPOINT instruction as well.
+
+   the RUN and CMD doesn't execute shell directly in 'exec form', so you need to access shell. 
+
+
+________________________________________________________________________________________________
+= ========================================  LABEL  =========================================== =
+
+    An image can be use more than one labels.
+
+ex: 
+    LABEL multi.label1="value1" \
+          multi.label2="value2" \
+          other="value3"
+
+    LABEL <key>=<value> <key>=<value> <key>=<value> ...
+
+
+________________________________________________________________________________________________
+= ===============================   MAINTAINER (Deprecated)   ================================ =
+
+    Sets the Author field of the generated images. But you can use the LABEL to difine an author.
+
+ex: 
+    LABEL maintainer="gregorisimei@gmail.com"
+
+
+________________________________________________________________________________________________
+= ========================================  EXPOSE  ========================================== =
+
+   The EXPOSE pecific the port that the container listens and the protocol ( TCP or UDP - TCP is default)
+
+ex: 
+    EXPOSE 80/tcp
+    EXPOSE 80/udp 
+
+________________________________________________________________________________________________
+= ===========================================  ENV  ========================================== =
+
+    ENV sets the environment variable <key> to the value <value>
+
+ex: 
+    ENV myName="John Doe" myDog=Rex\ The\ Dog \
+        myCat=fluffy
+
+
+________________________________________________________________________________________________
+= ==========================================   ADD   ========================================= =
+
+    The ADD instruction copies new files, directories or remote file URLs from <src> and adds them to the filesystem of the image at the path <dest>.
+
+ex:
+    ADD [--chown=<user>:<group>] <src>... <dest>
+    ADD [--chown=<user>:<group>] ["<src>",... "<dest>"] (this form is required for paths containing whitespace)
+
+________________________________________________________________________________________________
+= =============  Parser Directive ( into the top of file, like coments ) :  ================== =
+    
+    # directive=value
+
+    # syntax=[remote image reference]           ex: # syntax=docker/dockerfile
+	
+    # escape=[character]			ex: # escape='
+    obs: used to difine a escape to the next line. The standard is '\'
+
+
+________________________________________________________________________________________________
+= =================================   Environment variables  ================================= =
+
+  => $variable_name or ${variable_name}
+
+  obs: variables able to use with the following instructions : ADD, COPY, ENV, EXPOSE, FROM, LABEL, STOPSIGNAL, USER, VOLUME and WORKDIR.
+  
+   ex:  
+       ENV abc=hello
+       ENV abc=bye def=$abc    # Result def=hello
+       ENV ghi=$abc            # Result ghi=bye
+
+
+________________________________________________________________________________________________
+= ===============================     .dockerignore file     ================================= =
+   
+   => used to exclude some files or paths
+   
+   ex: 
+       # comment
+       */temp*       # Exclude all root subdiretories that the name start with 'temp'
+       */*/temp*     # Exclude all paths or files two levels bellow the root
+       temp?         # Exclude all root repositories or files the start with 'temp'
+       **/*.txt      # Exclude all files with '.txt' in final in any path
+       !README.md    # Exclude all exception '!' README.md file

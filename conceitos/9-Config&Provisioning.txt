@@ -1,0 +1,5 @@
+=====   Config/ Provisioning   =====
+
+   O objetivo é automatizar a configuração de um servidor. Pois num projeto com muitos servidores, caso seja necessário criar uma nova configuração, precisária alterar um por um. Porém com algumas ferramentas, é possível fazer uma alteração geral com apenas um arquivo.
+
+      Tools : Chef, Puppet, Ansible, Salt, Vagrant e etc.

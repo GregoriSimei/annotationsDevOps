@@ -1,0 +1,7 @@
+=====   Cloud/ Iaas/ Pass   =====
+
+   IaaS (Infrastructure as a Service) – Possibilitar um escalonamento automático, de acordo com a demanda, de maneira que o cliente pague apenas pelo que ele usa.
+   PasS (Plataform as a Service) – Como IasS,PasS também possui uma infraestrutura. No entanto, este também oferece ferramentas de BI, ferramentas de desenvolvimento e etc
+
+      Tools : Amazon Web Service, Azure, Google Cloud Platform e etc.
+

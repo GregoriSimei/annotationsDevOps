@@ -1,0 +1,4 @@
+=====   CD (Continuous Delivery)   =====
+
+      Permitir a entrega continua do Código. Ou seja, uma vez que o Código passou com sucesso por todo o processo de integração, é feita uma entrega do Código.
+      Essa entrega pode ser um executável, um zip ou etc, ou seja, um entregável.

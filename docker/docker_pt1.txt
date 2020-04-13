@@ -1,0 +1,50 @@
+Virtualização Total: Virtualiza todo um sistema
+
+Paravirtualização: usa-se alguns componentes em comum. Exemplo: Compartilhamento da mesma RAM
+
+Docker: 
+   - Virtualização a nível de S.O. 
+   - Mesmo Kernel
+   - Partida Quente
+   - Mais rápido
+   - Controle granular de recursos > é possível fazer um set expecífico do que você precisa
+   
+Container
+   - Processo de isolamento dentro do sistema operacional
+   - Criado para ser uma alternatva barata à virtualização
+   - Formato padronizado (imagens, container, composições)
+   - Funciona na sua maquina e no servidor em produção
+   - Imagens de disco versionáveis
+   - Rede inteligente
+   - Arquivo de composição de containers
+   - Docker Registry
+
+Desenvolvedor
+   Características
+      - Ponte rápida para desenvolvimento
+         > Pois ja possui configurações necessárias, ou seja, elimina todo o trabalho de configuração inicial
+      - Pode ser utilizado em algumas modalidades
+         > Como ferramenta do dia a dia (ex: builder)
+         > Como serviço que se queira consumir (ex: mysql)
+            * Usado para consumo próprio quanto publico
+         > Como ponte para seu próprio projeto
+            * Criar imagem com seu projeto
+            * Criação de arquivos de composição de containers  
+         > Docker volume: monta sua pasta local: executa no docker
+            * É possível criar pastas com compartilhamento em comum ao SO ou até mesmo entre Containers.
+
+
+Docker em produção
+   - Escalonamento horizontal
+   - Clusters
+      > Containers entre nós
+   - Seu server vira um agragador de containers
+      > Build container/ Deployment container
+
+
+Ferramentas
+   docker-compose 
+   portainer.io
+   docker swar
+   apache mesos
+   kubernetes

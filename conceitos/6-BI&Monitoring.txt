@@ -1,0 +1,5 @@
+=====   BI/ Monitoring   =====
+
+   O objetivo é monitorar como esta o funcionamento das aplicações e/ou promover dados que facilitem uma tomada de decisão, caso algo não esteja como o desejado.
+
+      Tool: Datalog, Naggios, kibana, Zabbix

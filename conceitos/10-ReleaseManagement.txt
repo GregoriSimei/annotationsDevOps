@@ -1,0 +1,10 @@
+=====   Release Management   =====
+
+      Tecnicas: 
+	Release Windows (Slow cadence): esta estratégia diz que em certos periodos ocorrerão as releases, por exemplo, domingo das 3 às 5 da manhã. Pode ser uma estratégia boa quando se escolhe horários onde o uso da aplicação é baixo. Porém, quando se trata de um time que usa da entrega continua, seriam muitas releases para serem feitas em um curto espaço de tempo. Assim sendo, teriam que ser adiadar algumas para a próxima janela de releases, o que poderia causar um congestionamento.
+
+	Release train: a ideia de entragas em um espaço de tempo é a mesma que a Slow cadence, mas nessa estratégia, cada time tem sua janela de tempo e frequência. Devido a isso, é comum ver grandes programas usando-a, pois cada time é responsável por desenvolver parte do software.  
+
+            Release windows (quick cadence): contribui para a ideia de implementação continua e evita os gargalos de muitas mudanças, um desafio enfrentado pelas tecnicas como Slow cadence e Release train. As entregas ainda são feitas emu ma janela de tempo, porém com uma frequencia muito maior.
+
+	Continuous release availability: essa técnica permite o time fazer entregas sempre que precisarem. Nessa estratégia a implementação continua esta verdadeiramente implementada. Esta pratica requer que esteja implementado ao projeto uma automatização total de implementações, teste de regressões, alterações de recursos, recuperação propria de componentes e muitas outras técnicas DevOps.

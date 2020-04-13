@@ -1,0 +1,6 @@
+=====   CI (Continuous Integration)   =====
+
+   Permitir que o código seja entregue mais de uma vez por dia e, com isso, passer por uma serie de testes que irão mostrar se o código esta funcionando como deveria ou não. Assim sendo, ajuda a evitar gastos a mais, uma vez que não é descoberta uma falha somente em produção. 
+   Este Código passa pelo processo de construção, teste e, se tudo ok nas etapas anteriores, se faz o merge. 
+      
+      Tools : Jenkins, Bamboo, Travis CI, Codeship, Visual Studio, Circle CI e etc.

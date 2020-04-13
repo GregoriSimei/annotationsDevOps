@@ -1,0 +1,5 @@
+=====   Deployment   =====
+      
+   Possibilitar o deployment do entregável em produção, ou seja, quando se recebe um entregável é feito o deploy dele.
+
+      Tools : Otto, Deployment Manager, Smart Frog, JuJu e etc.

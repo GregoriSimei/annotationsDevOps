@@ -1,0 +1,52 @@
+Resume
+
+ - Django has two importants philosofy:
+      > App: it is a WebAplication that does something. it is composed of a set of moedels, views, templates, tests;
+      > Project: it is a collection of configuration and apps;
+ - You should use the Admin functions only to create a page to an administrator to use it.
+ - For user navegation, you can use a view.
+ - Inside the template folder, you can add the HTML structure and reference it in the view file
+ - To add static files like, CSS, JQuery, JavaScript or etc, you need to create a "static" folder inside
+ - the app that will use it.
+ - You need to reference the template and static folders in the settings file.
+ - Is nedded to create a new database informations when run the tests, because when the tests is running, a new database is created
+
+
+
+Commands
+
+Inside the var declared in Model file.
+   > auto_now_add => Add the current hour and date when you save it on database.
+
+URL best form to use
+   > Year / Month
+	Regex	(?P<year>[0-9]{4})/(?P<month>[0-9]{2})
+	Example	url(r'^articles/(?P<year>[0-9]{4})/(?P<month>[0-9]{2})/$', views.month_archive, name='month')
+	Valid URL	/articles/2016/01/
+	Captures	{'year': '2016', 'month': '01'}
+   > Year
+	Regex	(?P<year>[0-9]{4})
+	Example	url(r'^articles/(?P<year>[0-9]{4})/$', views.year_archive, name='year')
+	Valid URL	/articles/2016/
+	Captures	{'year': '2016'}
+   > Django User Username
+	Regex	(?P<username>[\w.@+-]+)
+	Example	url(r'^profile/(?P<username>[\w.@+-]+)/$', views.user_profile, name='user_profile')
+	Valid URL	/profile/vitorfs/
+	Captures	{'username': 'vitorfs'}
+   > Slug Field with Primary Key
+	Regex	(?P<slug>[-\w]+)-(?P<pk>\d+)
+	Example	url(r'^blog/(?P<slug>[-\w]+)-(?P<pk>\d+)/$', views.blog_post, name='blog_post')
+	Valid URL	/blog/hello-world-159/
+	Captures	{'slug': 'hello-world', 'pk': '159'}
+   > Primary Key AutoField
+	Regex	(?P<pk>\d+)
+	Example	url(r'^questions/(?P<pk>\d+)/$', views.question, name='question')
+	Valid URL	/questions/934/
+	Captures	{'pk': '934'}
+   > Slug Field
+	Regex	(?P<slug>[-\w]+)
+	Example	url(r'^posts/(?P<slug>[-\w]+)/$', views.post, name='post')
+	Valid URL	/posts/hello-world/
+	Captures	{'slug': 'hello-world'}
+

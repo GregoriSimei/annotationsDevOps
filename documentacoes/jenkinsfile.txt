@@ -25,7 +25,7 @@ ex :
           }
      }
 
-Resultado = Hello my friend 
+Resultado = Hello my friend Gregori
 
 se o environment estiver fora dos stages, ele valerá para todos stage. No entanto, se ele estiver dentro de algum stage, valerá apenas para este.
 

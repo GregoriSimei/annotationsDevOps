@@ -10,7 +10,14 @@ Resume
  - the app that will use it.
  - You need to reference the template and static folders in the settings file.
  - Is nedded to create a new database informations when run the tests, because when the tests is running, a new database is created
+ - You can create a HTML block with Django. This help you to extend the block to other page.
+ - View: 
+    + Function-Based View (FBV)
+    + Class-Based View (CBV)
+    + Generic-Class Based View (GCBV)
 
+Gunicorn is the one responsible for executing the Django code behind a proxy server
+  
 
 
 Commands
@@ -50,3 +57,5 @@ URL best form to use
 	Valid URL	/posts/hello-world/
 	Captures	{'slug': 'hello-world'}
 
+Form 
+   > {% csrf_token %} - it is used in forms to provide more security

@@ -1,7 +1,17 @@
 =====   Cloud/ Iaas/ Pass   =====
 
    IaaS (Infrastructure as a Service) – Possibilitar um escalonamento automático, de acordo com a demanda, de maneira que o cliente pague apenas pelo que ele usa.
-   PasS (Plataform as a Service) – Como IasS,PasS também possui uma infraestrutura. No entanto, este também oferece ferramentas de BI, ferramentas de desenvolvimento e etc
+   PasS (Plataform as a Service) – Como IasS,PasS também possui uma infraestrutura. No entanto, este também oferece ferramentas de BI, ferramentas de desenvolvimento e etc, que possibilitam ultilizar um servidor através de um serviço.
 
       Tools : Amazon Web Service, Azure, Google Cloud Platform e etc.
 
+História:
+    A algumas décadas atrás, quando uma aplicação tinha que ser alocada em um servidor, ultilizava-se um servidor físico(bare metal). Este servidor estaria rodando "unica e exlusivamente" sua aplicação.  
+    Nesta abordagem, caso precisasse configurar algo, poderia gerar um ambiente de muito estresse, pois qualquer erro poderia causar um problema critico ao serviço disponibilizado ou ao servidor - que é a maquina em si.     
+    Porém, com o surgimento de maneiras alternativas de disponibilizar um serviço, como a virtualização, essas tarefas se tornaram um poco menos estressantes, pois, caso alguem excluisse algo fundamental para o funcionamento da maquina ou serviço, em poucas horas era possivel ter um servidor novo.
+    Contudo, a disponibilização de um serviço continuou em evolução. Assim, hoje temos a possibilidade de criar um container. 
+    Com o surgimento da containerização, um serviço ou servidor pode ser criado ou recriado em segundos. Além disso, uma vez que na virtualização era necessario uma disponibilização mínima do hardware do servidor para o serviço, na containerização isso é feito de maneira escalonável. Ou seja, um serviço ocupa o espaço de memoria suficiente para que ele precisa e não bloqueia parte do sistema físico, ultiliza de forma compartilhada o hardware.
+    Mudou-se também a forma de disponibilização desses recursos e serviços. Passou a ser possível hospedar em uma empresa especializada, através da internet.
+    Essa nova maneira ajudou a cortar gastos com um ambiente adequado, o hardware e gastos relacionados com sua manutenção e funcionamento.
+    Esse foi o surgimento da Infraestrutura como Serviço (IaaS).
+    Com isso, possibilitou a criação de software que ajudariam a subir um servidor, conhecido como Software como Serviço(SaaS).

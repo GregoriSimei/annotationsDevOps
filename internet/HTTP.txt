@@ -1,0 +1,73 @@
+HTTP
+
+De acordo com o modelo OSI, o protocolo HTTP funciona na camada de aplicação.
+Nele estão contidas todas as referências necessárias para que o uma comunicação seja feita.
+Protocolo de Request e Response.
+
+
+--------------------------------------------------------------------
+
+> HTTP Headers Request <
+
+Linha de pedido:
+ - GET/POST/DELETE/PATCH/PUT/OPTIONS/HEAD/TRACE/CONNECT
+ - Recurso
+ - Versão HTTP
+
+Cabeçalhos Gerais:
+ - Date/ Pragma / Cache-Control / Connection e etc
+
+Cabeçalhos Pedido
+ - Preferencia de resposta:
+    * Accept > O formato que é servidor aceita
+    * Accept-Language > Lingua que sera respondida
+    * etc
+ - Informações enviadas com pedido:
+    * User-Agent > Qual o cliente que fez a requisição
+    * Authorization > Autenticação de usuários
+    * etc
+ - Pedido condicional:
+    * passar uma condicional para o servidor
+    * Pode ser usada para atualização do cache, por exemplo, se a data que você passou for mais antiga que a do ultimo cache feito, pode ser feito um script para retornar o cache atualizado.
+ - Restrição no servidor:
+    * Host > O que quer acessar
+    * etc
+
+Cabeçalhos Entidade
+ - Content-type > Qual o tipo de recurso que estou enviando para o servidor
+ - Content-Language > Qual a linguagem do recurso
+ - Content-Length > O tamanho do recurso
+ - etc
+
+Entidade/Recurso
+ - Recurso que esta sendo enviado
+
+
+----------------------------------------------------------------------
+
+> HTTP Headers Response < 
+
+Linha de status:
+ - Versão HTTP
+ - Status Code
+ - Mensagem do Status
+
+Cabeçalhos Gerais:
+ - Date/ Pragma / Cache-Control / Connection e etc
+ - etc
+
+Cabeçalhos de Resposta:
+ - Redirecionamento:
+     * Location
+ - Informação:
+     * Server / Retry-After / Accepts-Ranges / etc
+ - Segurança:
+     * WWW-Aithenticate / Proxy-Authentiacte / etc
+ - Cache:
+     * Age / Vary / Etag / etc
+
+Cabeçalhos de Entidade:
+ - Content-type / Content-Language / Content-Length / etc
+
+Entidade/Recurso:
+ - Recurso que esta sendo enviado

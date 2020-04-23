@@ -1,0 +1,2 @@
+> Ver se existem e corrigir bugs
+> Contruir apps e as views

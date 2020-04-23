@@ -1,0 +1,4 @@
+- Estudar sobre:
+   > Linux
+   > Django
+   > protocolo HTTP 

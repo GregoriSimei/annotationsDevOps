@@ -1,0 +1,35 @@
+git documentation
+
+git [--version] [--help] [-C <path>] [-c <name>=<value>]
+    [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+    [-p|--paginate|-P|--no-pager] [--no-replace-objects] [--bare]
+    [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+    [--super-prefix=<path>]
+    <command> [<args>]
+
+
+Parameter
+
+-C <path>
+   it will execute the command as if git was in the path. This parameter help you when you aren't in the desired path. Then you only need to set a path as parameter. Ex: git -C /home/user/repository status.
+
+
+Commands
+
+git-add[1]
+Add file contents to the index
+
+git-bisect[1]
+Use binary search to find the commit that introduced a bug
+
+git-branch[1]
+List, create, or delete branches
+
+git-checkout[1]
+Switch branches or restore working tree files
+
+git-cherry-pick[1]
+Apply the changes introduced by some existing commits
+
+git-citool[1]
+Graphical alternative to git-commit
